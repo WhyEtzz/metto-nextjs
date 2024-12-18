@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes hero_hover {
+  0%, 100% {
+      transform: translateY(-5%);
+  }
+  50% {
+      transform: translateY(0%);
+  }
+}
+
+.hero_img {
+  animation: hero_hover 8s ease-in-out 0s infinite ;
+}
+
+.cursor
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.778);
+    box-shadow: 1px 1px 50px #71a777;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.bgmage {
+  background-image: url("/assets/9562064.png");
+  background-position: center;
+  background-color: #cccccc;
+  background-repeat: repeat;
+}
+.carousel-item {
+  scroll-snap-align: center !important;
+}
+
+.swal2-image{
+  opacity: 0%;
+}
+
+.swal2-popup {
+  background-size: 100% 100% !important;
+  height: 80vh;
+  width: 45vh;
+  }
+
+.swal2-close {
+  box-shadow: none !important; 
+}
+
+@keyframes hrv {
+  0% {
+      opacity: 0
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.formm {
+  animation: hrv 500ms ease-in;
+}

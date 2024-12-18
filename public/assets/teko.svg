@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="37.1797mm" height="37.1797mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 438 438"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#F4A43C}
+    .fil2 {fill:#FEFEFE}
+    .fil1 {fill:#FEFEFE;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <circle class="fil0" cx="219" cy="219" r="219"/>
+  <g id="_2331098687520">
+   <path class="fil1" d="M407 219l-7 0c0,50 -20,95 -53,128 -33,33 -78,53 -128,53 -50,0 -95,-20 -128,-53 -33,-33 -53,-78 -53,-128 0,-50 20,-95 53,-128 33,-33 78,-53 128,-53 50,0 95,20 128,53 33,33 53,78 53,128l7 0 6 0c0,-107 -87,-194 -194,-194 -107,0 -194,87 -194,194 0,107 87,194 194,194 107,0 194,-87 194,-194l-6 0z"/>
+   <g>
+    <g>
+     <g>
+      <path class="fil2" d="M154 200c-12,0 -23,10 -23,23l0 26c0,4 4,7 8,7 4,0 8,-3 8,-7l0 -26c0,-4 3,-8 7,-8 5,0 8,-3 8,-8 0,-4 -3,-7 -8,-7z"/>
+     </g>
+    </g>
+    <g>
+     <g>
+      <path class="fil2" d="M330 259l-12 0c21,-64 20,-60 20,-60 1,-5 -3,-10 -8,-10l-31 0c-3,0 -6,3 -7,6 -4,14 -4,13 -4,14 -1,7 -6,13 -12,16l0 -2c0,-15 -6,-28 -16,-38l0 -40c0,-30 -24,-54 -54,-54l-36 0c-30,0 -54,24 -54,54l0 40c-10,10 -16,23 -16,38l0 52c0,30 25,54 54,54l68 0c9,0 17,-2 25,-6 6,4 13,6 21,6l31 0c22,0 39,-18 39,-39l0 -23c0,-4 -3,-8 -8,-8zm-54 -17c14,-4 25,-16 27,-30l2 -7 15 0c-20,58 -18,53 -19,54l-25 0 0 -17zm-145 -97c0,-21 18,-38 39,-38l36 0c22,0 39,17 39,38l0 29c-5,-2 -10,-4 -16,-5l0 -8c0,-13 -10,-23 -23,-23l-10 0 0 -8c0,-4 -4,-8 -8,-8 -4,0 -8,4 -8,8l0 8 -10 0c-13,0 -23,10 -23,23l0 8c-6,1 -11,3 -16,5l0 -29 0 0zm83 16l0 8 -52 0 0 -8c0,-4 4,-8 8,-8l36 0c4,0 8,4 8,8zm22 150c-5,2 -10,2 -14,2l-68 0c-21,0 -38,-17 -38,-38l0 -52c0,-21 17,-39 38,-39l68 0c21,0 38,18 38,39 0,4 0,32 0,36l-23 0c-4,0 -8,4 -8,8l0 23c0,8 3,15 7,21zm87 -21c0,13 -11,23 -24,23l-31 0c-13,0 -23,-10 -23,-23l0 -15c8,0 70,0 78,0l0 15z"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
