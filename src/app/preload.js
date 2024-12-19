@@ -10,7 +10,7 @@ export default function Preloading() {
     
     return (
         <div className="flex justify-center items-center w-screen h-screen bg-white z-[999] sticky top-0" ref={pre}>
-            <img src="/assets/animation.gif" alt="loading"/>
+            <img src="/assets/Animation.gif" alt="loading"/>
         </div>
     )
 }
