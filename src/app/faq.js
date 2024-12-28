@@ -15,7 +15,7 @@ const obj = [
     },
     {
         q:"Minum Metto Intensitas BAB Bertambah ?",
-        a:<p>Efek Metto bisa meningkatkan frekuensi BAB secara aman dan alami."</p>
+        a:<p>Efek Metto bisa meningkatkan frekuensi BAB secara aman dan alami.</p>
     },
     {
         q: "Cara Cek Keaslian Metto ?",
