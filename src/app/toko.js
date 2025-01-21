@@ -12,22 +12,10 @@ export default function Toko() {
                 <div className="flex justify-center items-center text-white font-bold bg-c_green p-1 rounded-full absolute right-3 top-3 size-6">1</div>       
             </div>
             </a>
-                <a href="#" className="w-full h-1/5 ">
-            <div className="flex justify-center items-center bg-c_shopee rounded-lg p-5 w-full relative hover:scale-105 transition-all duration-500">
-                <img src="/assets/Shopee-white.svg" alt="tiktok shop" className="h-10"/>
-                <div className="flex justify-center items-center text-white font-bold bg-c_green p-1 rounded-full absolute right-3 top-3 size-6">2</div>       
-            </div>
-            </a>
-                <a href="#" className="w-full h-1/5 ">
+                <a href="https://vt.tiktok.com/ZS6beVcyR/?page=Mall" className="w-full h-1/5 ">
             <div className="flex justify-center items-center bg-black rounded-lg p-5 w-full relative hover:scale-105 transition-all duration-500">
                 <img src="/assets/tiktok-shop-white.svg" alt="tiktok shop" className="h-10 w-60"/>
                 <div className="flex justify-center items-center text-white font-bold bg-c_green p-1 rounded-full absolute right-3 top-3 size-6">1</div>       
-            </div>
-            </a>
-                <a href="#" className="w-full h-1/5 ">
-            <div className="flex justify-center items-center bg-black rounded-lg p-5 w-full relative hover:scale-105 transition-all duration-500">
-                <img src="/assets/tiktok-shop-white.svg" alt="tiktok shop" className="h-10 w-60"/>
-                <div className="flex justify-center items-center text-white font-bold bg-c_green p-1 rounded-full absolute right-3 top-3 size-6">2</div>       
             </div>
             </a>
             </div>
