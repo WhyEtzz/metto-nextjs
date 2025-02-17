@@ -16,7 +16,7 @@ export default function Toko() {
                 <img src="/assets/tiktok-shop-white.svg" alt="tiktok shop" className="h-10 w-60"/> 
             </div>
             </a>
-                <a href="https://g.co/kgs/eTrpTn1" className="w-full h-1/5 ">
+                <a href="https://maps.app.goo.gl/tGx5avRXacTDYoUm7" className="w-full h-1/5 ">
             <div className="flex justify-center items-center bg-[#045E4D] rounded-lg p-5 w-full relative hover:scale-105 transition-all duration-500">
                 <img src="/assets/Toko Ban Sen Tong.svg" alt="offline shop" className="h-10 w-60"/>      
             </div>
