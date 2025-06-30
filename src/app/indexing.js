@@ -11,7 +11,6 @@ function IndexPage() {
           key="canonical"
         />
       </Head>
-      <p>This post exists on two URLs.</p>
     </div>
   );
 }
