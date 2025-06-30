@@ -7,7 +7,7 @@ function IndexPage() {
         <title>Metto Official || Herbal Tea</title>
         <link
           rel="canonical"
-          href="https://example.com/blog/original-post"
+          href="https://www.metto.id/"
           key="canonical"
         />
       </Head>
