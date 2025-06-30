@@ -16,6 +16,9 @@ const geistMono = localFont({
 export const metadata = {
   title: "Metto Official || Herbal Tea",
   description: "Metto Official Website",
+  alternates: {
+        canonical: './',
+    }
 };
 
 export default function RootLayout({ children }) {
