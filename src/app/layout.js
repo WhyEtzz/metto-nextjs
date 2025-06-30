@@ -17,7 +17,7 @@ export const metadata = {
   title: "Metto Official || Herbal Tea",
   description: "Metto Official Website",
   alternates: {
-        canonical: './',
+        canonical: 'https://metto.id',
     }
 };
 

@@ -10,7 +10,6 @@ import Testimoni from "./testimoni";
 import FAQ from "./faq";
 import Toko from "./toko";
 import Preloading from "./preload";
-import IndexPage from "./indexing.js"
 
 
 const montserrat_regular = Montserrat({
@@ -64,7 +63,6 @@ export default function Home() {
     {/*      
     <Dotes/>
     */}
-    <IndexPage/>
     <ScrollPercentage/>
     <Preloading/>
     {/* Navbar */}
