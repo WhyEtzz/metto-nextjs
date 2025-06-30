@@ -27,7 +27,7 @@ const montserrat_regular = Montserrat({
     subsets: ['latin'],
     style: 'italic'
   })
-
+const contact = "https://wa.me/6285117613148"
 export default function Selling() {
     return ( 
         <div className="flex flex-col justify-center items-center py-10 lg:py-0 px-5 lg:px-24 relative">
@@ -41,7 +41,7 @@ export default function Selling() {
                 <div className="flex flex-row gap-1 items-center justify-start lg:justify-center"><Image src={"/assets/check.svg"} width={0} height={0} loading="eager" className="size-14" alt='Check icon'/><span className="text-[#608148] text-2xl">Siap kirim seluruh Indonesia</span></div>
                 <div className="flex flex-row gap-1 items-center justify-start lg:justify-center"><Image src={"/assets/check.svg"} width={0} height={0} loading="eager" className="size-14" alt='Check icon'/><span className="text-[#608148] text-2xl">Bisa COD</span></div>
             </div>
-            <Link href={"https://vt.tiktok.com/ZS6beVcyR/?page=Mall"} className={`${montserrat_semibold.className} text-white text-3xl text-center rounded-full bg-[#608148] px-10 py-5 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>ORDER SEKARANG</Link>
+            <Link href={contact} className={`${montserrat_semibold.className} text-white text-3xl text-center rounded-full bg-[#608148] px-10 py-5 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>ORDER SEKARANG</Link>
             </div>
             <div className="width-1/2 flex flex-row">
       <Image 
