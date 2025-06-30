@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Head from 'next/head';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 
@@ -21,6 +22,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
+    <Head>
+        <title>Metto Official || Herbal Tea</title>
+        <link
+          rel="canonical"
+          href="https://metto.id"
+          key="canonical"
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
