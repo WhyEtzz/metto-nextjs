@@ -35,7 +35,7 @@ export default function Hero() {
   const size = useWindowSize();
     return (<>
         {/* Hero */}
-    <div className="flex flex-col lg:flex-row w-full justify-between items-center px-1 bg-transparent" style={{paddingTop: `${(size.width<800)?2.75:size.width<1600?0:8}rem`, paddingBottom: `${(size.width<800)?2.75:size.width<1600?0:8}rem`}}>
+    <div className="flex flex-col lg:flex-row w-full justify-between items-center px-1 bg-transparent overflow-hidden" style={{paddingTop: `${(size.width<800)?2.75:size.width<1600?0:8}rem`, paddingBottom: `${(size.width<800)?2.75:size.width<1600?0:8}rem`}}>
     <div className="lg:hidden flex flex-col h-full justify-center items-center py-32 pb-56">
       <Image
       src={"/assets/Produk Metto.png"}
