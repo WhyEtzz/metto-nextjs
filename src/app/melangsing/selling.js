@@ -27,7 +27,7 @@ const montserrat_regular = Montserrat({
     subsets: ['latin'],
     style: 'italic'
   })
-const contact = "https://wa.me/6285117613148"
+const contact = "https://wa.me/message/MINON2EJV3GFB1"
 export default function Selling() {
     return ( 
         <div className="flex flex-col justify-center items-center py-10 lg:py-0 px-5 lg:px-24 relative">

@@ -28,7 +28,7 @@ const montserrat_regular = Montserrat({
     style: 'italic'
   })
  
-const contact = "https://wa.me/6285117613148"
+const contact = "https://wa.me/message/MINON2EJV3GFB1"
 
 export default function Pricing() {
     return (<>
