@@ -48,7 +48,7 @@ export default function Pricing() {
       });
 
       pixel.init({});
-      const eventData: EventData[TrackableEventNameEnum.Purchase] = {
+      const eventData = {
       content_ids: ['21312'],
       currency: 'USD',
       value: 1
