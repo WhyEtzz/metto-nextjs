@@ -4,6 +4,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 const PixelTracker = dynamic(() => import("../../components/PixelTracker"), { ssr: true });
 import Script from 'next/script';
+import { Html, Head, Main, NextScript } from 'next/document';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,8 +24,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth ">
-            <head>
+    <Html lang="en" className="scroll-smooth ">
+            <Head>
         {/* Meta Pixel Code */}
         <Script
           dangerouslySetInnerHTML={{
@@ -51,14 +52,16 @@ export default function RootLayout({ children }) {
             src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FBPixel}&ev=PageView&noscript=1`}/>
         </noscript>
         {/* End Meta Pixel Code */}
-      </head>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
-      >
+      >    
+          <Main />
+          <NextScript />
          <PixelTracker />
         {children}
       </body>
         <GoogleAnalytics gaId={process.env.gID} />
-    </html>
+    </Html>
   );
 }
