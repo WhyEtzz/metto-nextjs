@@ -2,7 +2,8 @@
 import Image from "next/image";
 import {Montserrat} from 'next/font/google'
 import {useRouter}  from 'next/navigation';
-import {useFacebookPixel} from '../../components/PixelbuttonTracker'
+import { useEffect, useState } from 'react';
+import { FacebookPixel, EventData, TrackableEventNameEnum } from 'react-meta-pixel';
 
 
 const montserrat_regular = Montserrat({
@@ -33,11 +34,33 @@ const montserrat_extrabold_i = Montserrat({
 
 
 export default function Pricing() {
-  console.log(useFacebookPixel())
   if (typeof window === undefined) return
   
+  const [facebookPixel, setFacebookPixel] = useState<FacebookPixel | null>(null);
   const router = useRouter();
-  const PixelButtonTracker = () => {
+  if (typeof window === undefined) return
+  
+  useEffect(() => {
+    const initializeFacebookPixel = async () => {
+      const pixel = new FacebookPixel({
+        pixelID: process.env.NEXT_PUBLIC_FBpixel,
+      });
+      
+      pixel.init({});
+      
+      
+      setFacebookPixel(pixel);
+      
+    };
+    
+    initializeFacebookPixel();
+  }, []);
+  
+  
+const PixelButtonTracker = () => {
+  pixel.trackEvent('ViewContent', {
+        content_ids: ['1'],
+      });
   router.push("https://wa.me/message/MINON2EJV3GFB1");  
   return null;
 };
