@@ -3,6 +3,7 @@ import Image from "next/image";
 import {Montserrat} from 'next/font/google'
 import {useRouter}  from 'next/navigation';
 import { useEffect } from 'react';
+import ReactPixel from "react-facebook-pixel";
 
 const montserrat_regular = Montserrat({
   weight: '400',
@@ -33,7 +34,6 @@ const montserrat_extrabold_i = Montserrat({
 
 export default function Pricing() {
   if (typeof window === undefined) return
-  import ReactPixel from "react-facebook-pixel";
   const router = useRouter();
   const PixelButtonTracker = () => {
     if (typeof window === undefined) return
