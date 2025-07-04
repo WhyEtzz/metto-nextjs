@@ -2,8 +2,9 @@
 import Image from "next/image";
 import {Montserrat} from 'next/font/google'
 import {useRouter}  from 'next/navigation';
-import { useEffect } from 'react';
-import ReactPixel from "react-facebook-pixel";
+import { useEffect, useState } from 'react';
+import { FacebookPixel } from 'react-meta-pixel';
+
 
 const montserrat_regular = Montserrat({
   weight: '400',
@@ -34,17 +35,30 @@ const montserrat_extrabold_i = Montserrat({
 
 export default function Pricing() {
   if (typeof window === undefined) return
+  
+  const [facebookPixel, setFacebookPixel] = useState<FacebookPixel | null>(null);
   const router = useRouter();
   const PixelButtonTracker = () => {
-    if (typeof window === undefined) return
+  if (typeof window === undefined) return
+
     useEffect(() => {
-  import('react-facebook-pixel')
-    .then(module => module.default)
-    .then(ReactPixel => {
-      ReactPixel.init(process.env.NEXT_PUBLIC_FBpixel)
-      ReactPixel.track("Purchase", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
-    })
-}, [])
+    const initializeFacebookPixel = async () => {
+      const pixel = new FacebookPixel({
+        pixelID: process.env.NEXT_PUBLIC_FBpixel,
+      });
+
+      pixel.init({});
+      setFacebookPixel(pixel);
+      pixel.trackEvent('Purchase', {
+      content_type: 'product',
+      });
+
+    };
+
+    initializeFacebookPixel();
+  }, []);
+
+
   router.push("https://wa.me/message/MINON2EJV3GFB1");  
   return null;
 };
