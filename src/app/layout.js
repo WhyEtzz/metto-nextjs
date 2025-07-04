@@ -26,8 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        {/* Meta Pixel Code */}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
+      >
         <noscript>
           <img
             height="1"
@@ -35,11 +36,6 @@ export default function RootLayout({ children }) {
             style={{ display: "none" }}
             src={"https://www.facebook.com/tr?id=" + process.env.NEXT_PUBLIC_FBPixel + "&ev=PageView&noscript=1"}/>
         </noscript>
-        {/* End Meta Pixel Code */}
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
-      >
         {children}
       </body>
        <PixelTracker />
