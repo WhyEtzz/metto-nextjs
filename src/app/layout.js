@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import dynamic from "next/dynamic";
+const PixelTracker = dynamic(() => import("../../components/PixelTracker"), { ssr: true });
 import "./globals.css";
 
 const geistSans = localFont({
