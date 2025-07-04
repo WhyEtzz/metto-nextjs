@@ -37,7 +37,7 @@ export default function Pricing() {
 const router = useRouter();
 const PixelButtonTracker = () => {
       useEffect(() => {
-        if (typeof window !== 'undefined') {
+        if (typeof window === undefined) return
       import("react-facebook-pixel")
         .then((x) => x.default)
         .then((ReactPixel) => {
@@ -45,9 +45,6 @@ const PixelButtonTracker = () => {
           ReactPixel.trackCustom("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
           router.push("https://wa.me/message/MINON2EJV3GFB1");
         });
-      } else {
-        return null
-      }
       });
       return null
       };
