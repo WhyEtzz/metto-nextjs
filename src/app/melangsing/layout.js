@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 const PixelTracker = dynamic(() => import("../../components/PixelTracker"), { ssr: true });
+import Script from 'next/script';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth ">
             <head>
         {/* Meta Pixel Code */}
-        <script
+        <Script
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
