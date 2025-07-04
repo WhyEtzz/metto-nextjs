@@ -37,7 +37,8 @@ export default function Pricing() {
 const router = useRouter();
 const PixelButtonTracker = () => {
       useEffect(() => {
-        if (typeof window === undefined) return
+        let initialized = (typeof window !== 'undefined') && !!window.fbq;
+        if (!initialized) return
       import("react-facebook-pixel")
         .then((x) => x.default)
         .then((ReactPixel) => {
