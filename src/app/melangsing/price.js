@@ -32,31 +32,18 @@ const montserrat_extrabold_i = Montserrat({
 
 
 export default function Pricing() {
-<<<<<<< HEAD
   if (typeof window === undefined) return
+  import ReactPixel from "react-facebook-pixel";
   const router = useRouter();
   const PixelButtonTracker = () => {
     if (typeof window === undefined) return
     useEffect(() => {
-    import ReactPixel from "react-facebook-pixel";
     const pixelId = process.env.NEXT_PUBLIC_FBpixel;
     ReactPixel.init(pixelId);
     ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
     router.push("https://wa.me/message/MINON2EJV3GFB1");  }, []);
   return null;
 };
-=======
-const router = useRouter();
-const PixelButtonTracker = () => {
-  if (typeof window === undefined) return
-  useEffect(() => {
-    const pixelId = process.env.NEXT_PUBLIC_FBpixel;
-    ReactPixel.init(pixelId);
-    ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
-    router.push("https://wa.me/message/MINON2EJV3GFB1");  }, []);
-  return null;
-};
->>>>>>> 31d3669c116f47764ce5f174886fc93851e62345
     return (<>
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-5 mt-32">
             {/* Card */}
