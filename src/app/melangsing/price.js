@@ -49,8 +49,7 @@ export default function Pricing() {
 
       pixel.init({});
       setFacebookPixel(pixel);
-      pixel.trackEvent('Purchase', {
-      content_type: 'product',
+      pixel.trackEvent('ViewContent', {
       content_ids: ['1234'],
       });
 
