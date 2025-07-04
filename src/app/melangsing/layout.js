@@ -31,7 +31,6 @@ export default function RootLayout({ children }) {
             style={{ display: "none" }}
             src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FBPixel}&ev=PageView&noscript=1`}/>
         </noscript>
-         <PixelTracker />
         {children}
       </body>
         <GoogleAnalytics gaId={process.env.gID} />

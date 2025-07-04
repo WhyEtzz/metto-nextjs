@@ -36,7 +36,6 @@ export default function RootLayout({ children }) {
         </noscript>
         {children}
       </body>
-       <PixelTracker />
         <GoogleAnalytics gaId={process.env.gID} />
     </html>
   );
