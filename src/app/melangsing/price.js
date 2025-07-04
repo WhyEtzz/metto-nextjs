@@ -38,10 +38,14 @@ export default function Pricing() {
   const PixelButtonTracker = () => {
     if (typeof window === undefined) return
     useEffect(() => {
-    const pixelId = process.env.NEXT_PUBLIC_FBpixel;
-    ReactPixel.init(pixelId);
-    ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
-    router.push("https://wa.me/message/MINON2EJV3GFB1");  }, []);
+  import('react-facebook-pixel')
+    .then(module => module.default)
+    .then(ReactPixel => {
+      ReactPixel.init(process.env.NEXT_PUBLIC_FBpixel)
+      ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
+    })
+}, []
+  router.push("https://wa.me/message/MINON2EJV3GFB1");  
   return null;
 };
     return (<>
