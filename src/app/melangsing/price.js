@@ -41,7 +41,7 @@ const PixelButtonTracker = () => {
         .then((x) => x.default)
         .then((ReactPixel) => {
           ReactPixel.init(process.env.NEXT_PUBLIC_FBPixel);
-          ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
+          ReactPixel.trackCustom("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
           router.push("https://wa.me/message/MINON2EJV3GFB1");
         });
       });
