@@ -48,9 +48,13 @@ export default function Pricing() {
       });
 
       pixel.init({});
-      pixel.trackEvent('ViewContent', {
-      content_ids: ['1234'],
-      });
+      const eventData: EventData[TrackableEventNameEnum.Purchase] = {
+      content_ids: ['21312'],
+      currency: 'USD',
+      value: 1
+      };
+
+      pixel.trackEvent(TrackableEventNameEnum.Purchase, eventData)
       setFacebookPixel(pixel);
 
     };
