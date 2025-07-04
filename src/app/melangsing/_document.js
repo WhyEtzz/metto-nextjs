@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 const PixelTracker = dynamic(() => import("../../components/PixelTracker"), { ssr: true });
-import Script from 'next/script';
 import { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
@@ -10,7 +9,7 @@ class MyDocument extends Document {
     <Html lang="en" className="scroll-smooth ">
             <Head>
         {/* Meta Pixel Code */}
-        <Script
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
