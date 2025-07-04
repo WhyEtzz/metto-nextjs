@@ -52,7 +52,7 @@ export default function Pricing() {
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center`}> Harga Normal: Rp30.500</span>
                 <span className={`${montserrat_regular.className} text-black text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-black text-5xl text-center`}>Rp27.800</span>
-                <Link href={contact} className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`} onClick={}>Buy Now</Link>
+                <Link href={contact} className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>Buy Now</Link>
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center my-14`}>Bantu anda untuk melancarkan buang air besar (BAB) dan detox tubuh</span>
             </div>
             {/* Card End */}
@@ -62,7 +62,7 @@ export default function Pricing() {
                 <span className={`${montserrat_regular.className} text-white text-lg text-center mt-6`}> Metto Slimming Tea & Metto Senna Leaf Mix Herbal</span>
                 <span className={`${montserrat_regular.className} text-white text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-white text-5xl text-center`}>Rp52.000</span>
-                <Link href={contact} className={`${montserrat_semibold.className} text-[#608148] text-2xl text-center rounded-full bg-white px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500 mb-14`} onClick={}>Buy Now</Link>
+                <Link href={contact} className={`${montserrat_semibold.className} text-[#608148] text-2xl text-center rounded-full bg-white px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500 mb-14`}>Buy Now</Link>
             </div>
             {/* Card End */}
             {/* Card */}
@@ -71,7 +71,7 @@ export default function Pricing() {
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center`}> Harga Normal: Rp30.500</span>
                 <span className={`${montserrat_regular.className} text-black text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-black text-5xl text-center`}>Rp27.800</span>
-                <Link href={contact} className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`} onClick={}>Buy Now</Link>
+                <Link href={contact} className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>Buy Now</Link>
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center my-14`}>Bantu kamu menurunkan berat badan dan melancarkan lemak</span>
             </div>
             {/* Card End */}
