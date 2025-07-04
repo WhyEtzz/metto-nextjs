@@ -2,6 +2,8 @@
 import Image from "next/image";
 import {Montserrat} from 'next/font/google'
 import {useRouter}  from 'next/navigation';
+import ReactPixel from "react-facebook-pixel";
+import { useEffect } from 'react';
 
 
 const montserrat_regular = Montserrat({
@@ -33,14 +35,14 @@ const montserrat_regular = Montserrat({
 
 export default function Pricing() {
 const router = useRouter();
-/*const PixelButtonTracker = () => {
+const PixelButtonTracker = () => {
   useEffect(() => {
     const pixelId = process.env.NEXT_PUBLIC_FBpixel;
     ReactPixel.init(pixelId);
     ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
     router.push("https://wa.me/message/MINON2EJV3GFB1");  }, []);
   return null;
-};*/
+};
     return (<>
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-5 mt-32">
             {/* Card */}
@@ -49,7 +51,7 @@ const router = useRouter();
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center`}> Harga Normal: Rp30.500</span>
                 <span className={`${montserrat_regular.className} text-black text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-black text-5xl text-center`}>Rp27.800</span>
-                <a href={contact} className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>Buy Now</a>
+                <button className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`} onClick={(e) => PixelButtonTracker()}>Buy Now</button>
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center my-14`}>Bantu anda untuk melancarkan buang air besar (BAB) dan detox tubuh</span>
             </div>
             {/* Card End */}
@@ -59,7 +61,7 @@ const router = useRouter();
                 <span className={`${montserrat_regular.className} text-white text-lg text-center mt-6`}> Metto Slimming Tea & Metto Senna Leaf Mix Herbal</span>
                 <span className={`${montserrat_regular.className} text-white text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-white text-5xl text-center`}>Rp52.000</span>
-                <a href={contact} className={`${montserrat_semibold.className} text-[#608148] text-2xl text-center rounded-full bg-white px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500 mb-14`}>Buy Now</a>
+                <button className={`${montserrat_semibold.className} text-[#608148] text-2xl text-center rounded-full bg-white px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500 mb-14`} onClick={(e) => PixelButtonTracker()}>Buy Now</button>
             </div>
             {/* Card End */}
             {/* Card */}
@@ -68,7 +70,7 @@ const router = useRouter();
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center`}> Harga Normal: Rp30.500</span>
                 <span className={`${montserrat_regular.className} text-black text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-black text-5xl text-center`}>Rp27.800</span>
-                <a href={contact} className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>Buy Now</a>
+                <button className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`} onClick={(e) => PixelButtonTracker()}>Buy Now</button>
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center my-14`}>Bantu kamu menurunkan berat badan dan melancarkan lemak</span>
             </div>
             {/* Card End */}
