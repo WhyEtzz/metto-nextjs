@@ -1,13 +1,24 @@
-import { useEffect } from "react";
-import ReactPixel from "react-facebook-pixel";
+import { useEffect, useState } from 'react';
+import { FacebookPixel } from 'react-meta-pixel';
 
-const PixelButtonTracker = () => {
+const useFacebookPixel = () => {
+  const [facebookPixel, setFacebookPixel] = useState<FacebookPixel | null>(null);
+
   useEffect(() => {
-    const pixelId = process.env.FBPixel;
-    ReactPixel.init(pixelId);
-    ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
-    console.log({message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()}    )
+    const initializeFacebookPixel = async () => {
+      const pixel = new FacebookPixel({
+        pixelID: process.env.NEXT_PUBLIC_FBpixel,
+      });
+
+      pixel.init({});
+
+      setFacebookPixel(pixel);
+    };
+
+    initializeFacebookPixel();
   }, []);
-  return null;
+
+  return facebookPixel;
 };
-export default PixelButtonTracker;
+
+export default useFacebookPixel;
