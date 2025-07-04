@@ -24,13 +24,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FBPixel}&ev=PageView&noscript=1`}/>
-        </noscript>
         {children}
       </body>
         <GoogleAnalytics gaId={process.env.gID} />
