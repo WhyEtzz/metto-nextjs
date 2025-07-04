@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import dynamic from "next/dynamic";
 import {Montserrat} from 'next/font/google'
-const PixelButtonTracker = dynamic(() => import("../../components/PixelbuttonTracker"), { ssr: false });
+const PixelButtonTracker = dynamic(() => import("../../components/PixelbuttonTracker"), { ssr: true });
 import {useRouter}  from 'next/navigation';
 
 

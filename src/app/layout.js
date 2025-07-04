@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import dynamic from "next/dynamic";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
-const PixelTracker = dynamic(() => import("../components/PixelTracker"), { ssr: false });
+const PixelTracker = dynamic(() => import("../components/PixelTracker"), { ssr: true });
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -50,8 +50,7 @@ export default function RootLayout({ children }) {
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=" + process.env.FBPixel + "&ev=
-            PageView&noscript=1"/>
+            src={"https://www.facebook.com/tr?id=" + process.env.FBPixel + "&ev=PageView&noscript=1"}/>
         </noscript>
         {/* End Meta Pixel Code */}
       </head>
