@@ -2,38 +2,50 @@
 import Image from "next/image";
 import {Montserrat} from 'next/font/google'
 import {useRouter}  from 'next/navigation';
-import ReactPixel from "react-facebook-pixel";
 import { useEffect } from 'react';
 
-
 const montserrat_regular = Montserrat({
-    weight: '400',
-    subsets: ['latin'],
-  })
-  const montserrat_medium = Montserrat({
-    weight: '500',
-    subsets: ['latin'],
-  })
-  const montserrat_semibold = Montserrat({
-    weight: '600',
-    subsets: ['latin'],
-  })
-  const montserrat_bold = Montserrat({
-    weight: '700',
-    subsets: ['latin'],
-  })
-  const montserrat_extrabold = Montserrat({
-    weight: '800',
-    subsets: ['latin'],
-  })
-  const montserrat_extrabold_i = Montserrat({
-    weight: '800',
-    subsets: ['latin'],
-    style: 'italic'
-  })
- 
+  weight: '400',
+  subsets: ['latin'],
+})
+const montserrat_medium = Montserrat({
+  weight: '500',
+  subsets: ['latin'],
+})
+const montserrat_semibold = Montserrat({
+  weight: '600',
+  subsets: ['latin'],
+})
+const montserrat_bold = Montserrat({
+  weight: '700',
+  subsets: ['latin'],
+})
+const montserrat_extrabold = Montserrat({
+  weight: '800',
+  subsets: ['latin'],
+})
+const montserrat_extrabold_i = Montserrat({
+  weight: '800',
+  subsets: ['latin'],
+  style: 'italic'
+})
+
 
 export default function Pricing() {
+<<<<<<< HEAD
+  if (typeof window === undefined) return
+  const router = useRouter();
+  const PixelButtonTracker = () => {
+    if (typeof window === undefined) return
+    useEffect(() => {
+    import ReactPixel from "react-facebook-pixel";
+    const pixelId = process.env.NEXT_PUBLIC_FBpixel;
+    ReactPixel.init(pixelId);
+    ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
+    router.push("https://wa.me/message/MINON2EJV3GFB1");  }, []);
+  return null;
+};
+=======
 const router = useRouter();
 const PixelButtonTracker = () => {
   if (typeof window === undefined) return
@@ -44,6 +56,7 @@ const PixelButtonTracker = () => {
     router.push("https://wa.me/message/MINON2EJV3GFB1");  }, []);
   return null;
 };
+>>>>>>> 31d3669c116f47764ce5f174886fc93851e62345
     return (<>
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-5 mt-32">
             {/* Card */}
