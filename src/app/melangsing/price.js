@@ -3,6 +3,8 @@ import Image from "next/image";
 import {Montserrat} from 'next/font/google'
 import {useRouter}  from 'next/navigation';
 import ReactPixel from "react-facebook-pixel";
+import { useEffect } from 'react';
+
 
 const montserrat_regular = Montserrat({
     weight: '400',
