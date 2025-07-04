@@ -44,7 +44,7 @@ export default function Pricing() {
       ReactPixel.init(process.env.NEXT_PUBLIC_FBpixel)
       ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
     })
-}, []
+}, [])
   router.push("https://wa.me/message/MINON2EJV3GFB1");  
   return null;
 };
