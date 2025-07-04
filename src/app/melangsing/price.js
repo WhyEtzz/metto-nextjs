@@ -3,7 +3,7 @@ import Image from "next/image";
 import {Montserrat} from 'next/font/google'
 import {useRouter}  from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { FacebookPixel, AdditionalEventData, EventData, TrackableEventNameEnum } from 'react-meta-pixel';
+import { FacebookPixel, EventData, TrackableEventNameEnum } from 'react-meta-pixel';
 
 
 const montserrat_regular = Montserrat({
@@ -48,13 +48,10 @@ export default function Pricing() {
       });
 
       pixel.init({});
-      const eventData = {
-      content_ids: ['21312'],
-      currency: 'USD',
-      value: 1
-      };
+      pixel.trackEvent('ViewContent', {
+      content_ids: ['1'],
+      });
 
-      pixel.trackEvent(TrackableEventNameEnum.Purchase, eventData)
       setFacebookPixel(pixel);
 
     };
