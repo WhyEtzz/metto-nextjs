@@ -47,8 +47,7 @@ export default function RootLayout({ children }) {
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=" + process.env.FBPixel + "&ev=
-            PageView&noscript=1"/>
+            src={`https://www.facebook.com/tr?id=$fix{process.env.FBPixel}&ev=PageView&noscript=1`}/>
         </noscript>
         {/* End Meta Pixel Code */}
       </head>
