@@ -51,6 +51,7 @@ export default function Pricing() {
       setFacebookPixel(pixel);
       pixel.trackEvent('Purchase', {
       content_type: 'product',
+      content_ids: ['1234'],
       });
 
     };
