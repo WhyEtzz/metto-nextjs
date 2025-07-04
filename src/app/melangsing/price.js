@@ -36,19 +36,14 @@ const montserrat_regular = Montserrat({
 export default function Pricing() {
 const router = useRouter();
 const PixelButtonTracker = () => {
-      useEffect(() => {
-        let initialized = (typeof window !== 'undefined') && !!window.fbq;
-        if (!initialized) return
-      import("react-facebook-pixel")
-        .then((x) => x.default)
-        .then((ReactPixel) => {
-          ReactPixel.init(process.env.NEXT_PUBLIC_FBPixel);
-          ReactPixel.trackCustom("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
-          router.push("https://wa.me/message/MINON2EJV3GFB1");
-        });
-      });
-      return null
-      };
+  if (typeof window === undefined) return
+  useEffect(() => {
+    const pixelId = process.env.NEXT_PUBLIC_FBpixel;
+    ReactPixel.init(pixelId);
+    ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
+    router.push("https://wa.me/message/MINON2EJV3GFB1");  }, []);
+  return null;
+};
     return (<>
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-5 mt-32">
             {/* Card */}
