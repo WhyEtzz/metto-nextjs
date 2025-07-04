@@ -33,6 +33,20 @@ const montserrat_regular = Montserrat({
 
 export default function Hero() {
   const size = useWindowSize();
+
+    useEffect(() => {
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init(process.env.NEXT_PUBLIC_FBPixel);
+        ReactPixel.pageView();
+
+        Router.events.on("routeChangeComplete", () => {
+          ReactPixel.pageView();
+        });
+      });
+  });
+
     return (<>
         {/* Hero */}
     <div className="flex flex-col lg:flex-row w-full justify-between items-center px-1 bg-transparent overflow-hidden" style={{paddingTop: `${(size.width<800)?2.75:size.width<1600?0:8}rem`, paddingBottom: `${(size.width<800)?2.75:size.width<1600?0:8}rem`}}>
