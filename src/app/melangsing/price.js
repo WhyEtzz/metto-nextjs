@@ -42,7 +42,7 @@ export default function Pricing() {
     .then(module => module.default)
     .then(ReactPixel => {
       ReactPixel.init(process.env.NEXT_PUBLIC_FBpixel)
-      ReactPixel.track("Track", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
+      ReactPixel.track("Purchase", {message: "Buy From Metto.id", timestamp: Date.now(), readableTimestamp: new Date()});
     })
 }, [])
   router.push("https://wa.me/message/MINON2EJV3GFB1");  
