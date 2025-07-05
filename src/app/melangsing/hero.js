@@ -34,7 +34,7 @@ const montserrat_regular = Montserrat({
 export default function Hero() {
   const size = useWindowSize();
 
-   /* useEffect(() => {
+    useEffect(() => {
     import("react-facebook-pixel")
       .then((x) => x.default)
       .then((ReactPixel) => {
@@ -45,7 +45,7 @@ export default function Hero() {
           ReactPixel.pageView();
         });
       });
-  }); */
+  }); 
 
     return (<>
         {/* Hero */}
