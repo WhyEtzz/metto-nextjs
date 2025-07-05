@@ -31,6 +31,7 @@ const montserrat_regular = Montserrat({
     style: 'italic'
   })
 export default function Selling() {
+  const router = useRouter();
   const handleSubmit = async (e) => {
   
     // Track form start

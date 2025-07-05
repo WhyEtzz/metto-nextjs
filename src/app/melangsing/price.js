@@ -30,24 +30,24 @@ const montserrat_regular = Montserrat({
     style: 'italic'
   })
  
-const handleSubmit = async (e) => {
-
-  // Track form start
-  if (window.fbq) window.fbq('track', 'Lead');
-  try {
-    // Track success
-    if (window.fbq) {
-      window.fbq('track', 'Contact', {
-        value: 1
-      });
-      router.push("https://wa.me/message/MINON2EJV3GFB1");  
+  export default function Pricing() {
+  const router = useRouter();
+  const handleSubmit = async (e) => {
+    // Track form start
+    if (window.fbq) window.fbq('track', 'Lead');
+    try {
+      // Track success
+      if (window.fbq) {
+        window.fbq('track', 'Contact', {
+          value: 1
+        });
+        router.push("https://wa.me/message/MINON2EJV3GFB1");  
+      }
+    } catch (error) {
+      // Track failure
+      if (window.fbq) window.fbq('trackCustom', 'FormError');
     }
-  } catch (error) {
-    // Track failure
-    if (window.fbq) window.fbq('trackCustom', 'FormError');
-  }
-};  
-export default function Pricing() {
+  };  
     return (<>
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-5 mt-32">
             {/* Card */}
