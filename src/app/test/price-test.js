@@ -36,32 +36,31 @@ const montserrat_extrabold_i = Montserrat({
 export default function Pricing() {
   if (typeof window === undefined) return
   
-  const [facebookPixel, setFacebookPixel] = useState<FacebookPixel | null>(null);
-  const router = useRouter();
-  if (typeof window === undefined) return
-  
-  useEffect(() => {
-    const initializeFacebookPixel = async () => {
-      const pixel = new FacebookPixel({
-        pixelID: process.env.NEXT_PUBLIC_FBpixel,
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  // Track form start
+  if (window.fbq) window.fbq('track', 'Lead');
+  try {
+    const response = await submitForm(data);
+    // Track success
+    if (window.fbq) {
+      window.fbq('track', 'Contact', {
+        value: 1
       });
-      
-      pixel.init({});
-      
-      
-      setFacebookPixel(pixel);
-      
-    };
-    
-    initializeFacebookPixel();
-  }, []);
-  
+    router.push("https://wa.me/message/MINON2EJV3GFB1");  
+    }
+  } catch (error) {
+    // Track failure
+    if (window.fbq) window.fbq('trackCustom', 'FormError');
+  }
+};  
   
 const PixelButtonTracker = () => {
   pixel.trackEvent('ViewContent', {
         content_ids: ['1'],
       });
-  router.push("https://wa.me/message/MINON2EJV3GFB1");  
   return null;
 };
     return (<>
