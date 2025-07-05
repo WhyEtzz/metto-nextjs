@@ -36,7 +36,7 @@ export default function Pricing() {
   if (typeof window === undefined) return
   
 
-const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   // Track form start
