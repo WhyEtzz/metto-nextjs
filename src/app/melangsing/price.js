@@ -1,69 +1,36 @@
-"use client"
 import Image from "next/image";
+import Link from 'next/link';
 import {Montserrat} from 'next/font/google'
-import {useRouter}  from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { FacebookPixel, EventData, TrackableEventNameEnum } from 'react-meta-pixel';
-
 
 const montserrat_regular = Montserrat({
-  weight: '400',
-  subsets: ['latin'],
-})
-const montserrat_medium = Montserrat({
-  weight: '500',
-  subsets: ['latin'],
-})
-const montserrat_semibold = Montserrat({
-  weight: '600',
-  subsets: ['latin'],
-})
-const montserrat_bold = Montserrat({
-  weight: '700',
-  subsets: ['latin'],
-})
-const montserrat_extrabold = Montserrat({
-  weight: '800',
-  subsets: ['latin'],
-})
-const montserrat_extrabold_i = Montserrat({
-  weight: '800',
-  subsets: ['latin'],
-  style: 'italic'
-})
-
+    weight: '400',
+    subsets: ['latin'],
+  })
+  const montserrat_medium = Montserrat({
+    weight: '500',
+    subsets: ['latin'],
+  })
+  const montserrat_semibold = Montserrat({
+    weight: '600',
+    subsets: ['latin'],
+  })
+  const montserrat_bold = Montserrat({
+    weight: '700',
+    subsets: ['latin'],
+  })
+  const montserrat_extrabold = Montserrat({
+    weight: '800',
+    subsets: ['latin'],
+  })
+  const montserrat_extrabold_i = Montserrat({
+    weight: '800',
+    subsets: ['latin'],
+    style: 'italic'
+  })
+ 
+const contact = "https://wa.me/message/MINON2EJV3GFB1"
 
 export default function Pricing() {
-  if (typeof window === undefined) return
-  
-  const [facebookPixel, setFacebookPixel] = useState<FacebookPixel | null>(null);
-  const router = useRouter();
-  if (typeof window === undefined) return
-  
-  useEffect(() => {
-    const initializeFacebookPixel = async () => {
-      const pixel = new FacebookPixel({
-        pixelID: process.env.NEXT_PUBLIC_FBpixel,
-      });
-      
-      pixel.init({});
-      
-      
-      setFacebookPixel(pixel);
-      
-    };
-    
-    initializeFacebookPixel();
-  }, []);
-  
-  
-const PixelButtonTracker = () => {
-  pixel.trackEvent('ViewContent', {
-        content_ids: ['1'],
-      });
-  router.push("https://wa.me/message/MINON2EJV3GFB1");  
-  return null;
-};
     return (<>
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-5 mt-32">
             {/* Card */}
@@ -72,7 +39,7 @@ const PixelButtonTracker = () => {
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center`}> Harga Normal: Rp30.500</span>
                 <span className={`${montserrat_regular.className} text-black text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-black text-5xl text-center`}>Rp27.800</span>
-                <button className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`} onClick={(e) => PixelButtonTracker()}>Buy Now</button>
+                <Link href={contact} className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>Buy Now</Link>
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center my-14`}>Bantu anda untuk melancarkan buang air besar (BAB) dan detox tubuh</span>
             </div>
             {/* Card End */}
@@ -82,7 +49,7 @@ const PixelButtonTracker = () => {
                 <span className={`${montserrat_regular.className} text-white text-lg text-center mt-6`}> Metto Slimming Tea & Metto Senna Leaf Mix Herbal</span>
                 <span className={`${montserrat_regular.className} text-white text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-white text-5xl text-center`}>Rp52.000</span>
-                <button className={`${montserrat_semibold.className} text-[#608148] text-2xl text-center rounded-full bg-white px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500 mb-14`} onClick={(e) => PixelButtonTracker()}>Buy Now</button>
+                <Link href={contact} className={`${montserrat_semibold.className} text-[#608148] text-2xl text-center rounded-full bg-white px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500 mb-14`}>Buy Now</Link>
             </div>
             {/* Card End */}
             {/* Card */}
@@ -91,7 +58,7 @@ const PixelButtonTracker = () => {
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center`}> Harga Normal: Rp30.500</span>
                 <span className={`${montserrat_regular.className} text-black text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-black text-5xl text-center`}>Rp27.800</span>
-                <button className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`} onClick={(e) => PixelButtonTracker()}>Buy Now</button>
+                <Link href={contact} className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>Buy Now</Link>
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center my-14`}>Bantu kamu menurunkan berat badan dan melancarkan lemak</span>
             </div>
             {/* Card End */}
