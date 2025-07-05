@@ -33,6 +33,7 @@ const montserrat_extrabold_i = Montserrat({
 
 
 export default function Pricing() {
+  const router = useRouter();
   if (typeof window === undefined) return
   
 
