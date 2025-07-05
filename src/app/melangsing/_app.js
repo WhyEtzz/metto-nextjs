@@ -1,7 +1,6 @@
 "use client"
 import { useEffect } from 'react'
-import { useRouter } from 'next/router'
-
+import {useRouter}  from 'next/navigation';
 import Script from 'next/script'
 
 const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FBpixel
