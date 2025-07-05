@@ -1,6 +1,9 @@
+"use client"
 import Image from "next/image";
 import Link from 'next/link';
 import {Montserrat} from 'next/font/google'
+import {useRouter}  from 'next/navigation';
+
 
 const montserrat_regular = Montserrat({
     weight: '400',
@@ -27,8 +30,24 @@ const montserrat_regular = Montserrat({
     subsets: ['latin'],
     style: 'italic'
   })
-const contact = "https://wa.me/message/MINON2EJV3GFB1"
 export default function Selling() {
+  const handleSubmit = async (e) => {
+  
+    // Track form start
+    if (window.fbq) window.fbq('track', 'Lead');
+    try {
+      // Track success
+      if (window.fbq) {
+        window.fbq('track', 'Contact', {
+          value: 1
+        });
+        router.push("https://wa.me/message/MINON2EJV3GFB1");  
+      }
+    } catch (error) {
+      // Track failure
+      if (window.fbq) window.fbq('trackCustom', 'FormError');
+    }
+  };  
     return ( 
         <div className="flex flex-col justify-center items-center py-10 lg:py-0 px-5 lg:px-24 relative">
             <div className="w-full lg:w-3/5">
@@ -41,7 +60,7 @@ export default function Selling() {
                 <div className="flex flex-row gap-1 items-center justify-start lg:justify-center"><Image src={"/assets/check.svg"} width={0} height={0} loading="eager" className="size-14" alt='Check icon'/><span className="text-[#608148] text-2xl">Siap kirim seluruh Indonesia</span></div>
                 <div className="flex flex-row gap-1 items-center justify-start lg:justify-center"><Image src={"/assets/check.svg"} width={0} height={0} loading="eager" className="size-14" alt='Check icon'/><span className="text-[#608148] text-2xl">Bisa COD</span></div>
             </div>
-            <Link href={contact} className={`${montserrat_semibold.className} text-white text-3xl text-center rounded-full bg-[#608148] px-10 py-5 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>ORDER SEKARANG</Link>
+            <button className={`${montserrat_semibold.className} text-white text-3xl text-center rounded-full bg-[#608148] px-10 py-5 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`} onClick={(e) => handleSubmit()}>ORDER SEKARANG</button>
             </div>
             <div className="width-1/2 flex flex-row">
       <Image 

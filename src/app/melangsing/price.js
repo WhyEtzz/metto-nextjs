@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image";
 import Link from 'next/link';
 import {Montserrat} from 'next/font/google'
+import {useRouter}  from 'next/navigation';
 
 const montserrat_regular = Montserrat({
     weight: '400',
@@ -28,8 +30,23 @@ const montserrat_regular = Montserrat({
     style: 'italic'
   })
  
-const contact = "https://wa.me/message/MINON2EJV3GFB1"
+const handleSubmit = async (e) => {
 
+  // Track form start
+  if (window.fbq) window.fbq('track', 'Lead');
+  try {
+    // Track success
+    if (window.fbq) {
+      window.fbq('track', 'Contact', {
+        value: 1
+      });
+      router.push("https://wa.me/message/MINON2EJV3GFB1");  
+    }
+  } catch (error) {
+    // Track failure
+    if (window.fbq) window.fbq('trackCustom', 'FormError');
+  }
+};  
 export default function Pricing() {
     return (<>
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-5 mt-32">
@@ -39,7 +56,7 @@ export default function Pricing() {
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center`}> Harga Normal: Rp30.500</span>
                 <span className={`${montserrat_regular.className} text-black text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-black text-5xl text-center`}>Rp27.800</span>
-                <Link href={contact} className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>Buy Now</Link>
+                <button className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`} onClick={(e) => handleSubmit()}>Buy Now</button>
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center my-14`}>Bantu anda untuk melancarkan buang air besar (BAB) dan detox tubuh</span>
             </div>
             {/* Card End */}
@@ -49,7 +66,7 @@ export default function Pricing() {
                 <span className={`${montserrat_regular.className} text-white text-lg text-center mt-6`}> Metto Slimming Tea & Metto Senna Leaf Mix Herbal</span>
                 <span className={`${montserrat_regular.className} text-white text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-white text-5xl text-center`}>Rp52.000</span>
-                <Link href={contact} className={`${montserrat_semibold.className} text-[#608148] text-2xl text-center rounded-full bg-white px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500 mb-14`}>Buy Now</Link>
+                <button className={`${montserrat_semibold.className} text-[#608148] text-2xl text-center rounded-full bg-white px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500 mb-14`} onClick={(e) => handleSubmit()}>Buy Now</button>
             </div>
             {/* Card End */}
             {/* Card */}
@@ -58,7 +75,7 @@ export default function Pricing() {
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center`}> Harga Normal: Rp30.500</span>
                 <span className={`${montserrat_regular.className} text-black text-lg mt-6 text-center`}>Harga Promo:</span>
                 <span className={`${montserrat_bold.className} text-black text-5xl text-center`}>Rp27.800</span>
-                <Link href={contact} className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`}>Buy Now</Link>
+                <button className={`${montserrat_semibold.className} text-white text-2xl text-center rounded-full bg-[#608148] px-10 py-1 mt-7 cursor-pointer hover:shadow-lg hover:scale-110 transition-all duration-500`} onClick={(e) => handleSubmit()}>Buy Now</button>
                 <span className={`${montserrat_regular.className} text-[#608148] text-lg text-center my-14`}>Bantu kamu menurunkan berat badan dan melancarkan lemak</span>
             </div>
             {/* Card End */}
