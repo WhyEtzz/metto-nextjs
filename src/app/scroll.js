@@ -3,7 +3,7 @@ const { useEffect } = require("react");
 
 
 export default function ScrollPercentage() {
-    useEffect(() => {
+    /*useEffect(() => {
     import("react-facebook-pixel")
       .then((x) => x.default)
       .then((ReactPixel) => {
@@ -14,7 +14,7 @@ export default function ScrollPercentage() {
           ReactPixel.pageView();
         });
       });
-  });
+  });*/
     useEffect(() => {
         const handleScroll = (event) => {
             document.querySelector(".scroll_percentage").style.width = Math.round(window.scrollY/(document.body.offsetHeight - window.innerHeight) * 100)+"%"
