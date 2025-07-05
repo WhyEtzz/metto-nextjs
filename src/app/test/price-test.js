@@ -37,7 +37,6 @@ export default function Pricing() {
   
 
 const handleSubmit = async (e) => {
-  e.preventDefault();
 
   // Track form start
   if (window.fbq) window.fbq('track', 'Lead');
