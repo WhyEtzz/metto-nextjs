@@ -10,6 +10,7 @@ import Testimoni from "./testimoni";
 import FAQ from "./faq";
 import Toko from "./toko";
 import Preloading from "./preload";
+import FacebookPixel from "./_app"
 
 
 const montserrat_regular = Montserrat({
@@ -63,6 +64,7 @@ export default function Home() {
     {/*      
     <Dotes/>
     */}
+    <FacebookPixel/>
     <ScrollPercentage/>
     <Preloading/>
     {/* Navbar */}

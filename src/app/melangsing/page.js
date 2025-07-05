@@ -12,6 +12,7 @@ import About from "./more_about";
 import Pricing from "./price";
 import Target from "./target";
 import Footer from "./footer";
+import FacebookPixel from "./_app"
 
 
 const montserrat_regular = Montserrat({
@@ -50,6 +51,7 @@ export default function Home() {
     {/*      
     <Dotes/>
     */}
+      <FacebookPixel/>
       <ScrollPercentage/>
       <Preloading/>
       {/* Navbar */}
