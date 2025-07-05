@@ -47,10 +47,10 @@ const handleSubmit = async (e) => {
       window.fbq('track', 'Contact', {
         value: 1
       });
+      router.push("https://wa.me/message/MINON2EJV3GFB1");  
     }
   } catch (error) {
     // Track failure
-    router.push("https://wa.me/message/MINON2EJV3GFB1");  
     if (window.fbq) window.fbq('trackCustom', 'FormError');
   }
 };  
