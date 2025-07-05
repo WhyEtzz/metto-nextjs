@@ -42,7 +42,6 @@ const handleSubmit = async (e) => {
   // Track form start
   if (window.fbq) window.fbq('track', 'Lead');
   try {
-    const response = await submitForm(data);
     // Track success
     if (window.fbq) {
       window.fbq('track', 'Contact', {
