@@ -92,7 +92,7 @@ export default function FAQ() {
     <span className="text-black font-bold text-lg">Info lebih lengkap hubungi :</span>
   <div className="flex flex-row justify-end gap-5">
     {isContainerActive? <div className="flex justify-center items-center text-center text-white px-10 py-6 bg-c_green rounded-xl w-36 h-5 cursor-pointer hover:scale-105 hover:shadow-lg transition-all duration-500 select-none" role="button" onClick={() => setinactive()}>FORM</div> : <div className="flex justify-center items-center text-center text-white px-10 py-6 bg-c_green rounded-xl w-36 h-5 cursor-pointer hover:scale-105 hover:shadow-lg transition-all duration-500 select-none" role="button" onClick={() => setactive()}>FORM</div>}
-    <div className="flex justify-center items-center text-center text-white px-10 py-6 bg-c_green rounded-xl w-36 h-10 cursor-pointer hover:scale-105 hover:shadow-lg transition-all duration-500 select-none"><a href="https://wa.me/6288989855467" target="_blank">WHATSAPP</a></div>
+    <div className="flex justify-center items-center text-center text-white px-10 py-6 bg-c_green rounded-xl w-36 h-10 cursor-pointer hover:scale-105 hover:shadow-lg transition-all duration-500 select-none"><a href="https://wa.me/6285117613148" target="_blank">WHATSAPP</a></div>
   </div>
   </div>
     </div>
